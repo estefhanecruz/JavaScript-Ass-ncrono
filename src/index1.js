@@ -11,5 +11,5 @@ processoDemorado()
     console.log("Log pós processo demorado");
   })
   .catch(() => {
-    console.log("O processo foi rejeitado");
+    console.log("Captura de erro - Processo rejeitado");
   });

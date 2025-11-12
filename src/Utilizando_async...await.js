@@ -14,7 +14,7 @@ async function executarProcessoDemorado() {
 executarProcessoDemorado();
 
 /*
-async await com tratamento de erros:
+//async await com tratamento de erros:
  
 async function executarProcessoDemorado() {
   try{

@@ -12,3 +12,20 @@ async function executarProcessoDemorado() {
   console.log("Log pós processo demorado");
 }
 executarProcessoDemorado();
+
+/*
+async await com tratamento de erros:
+ 
+async function executarProcessoDemorado() {
+  try{
+    await processoDemorado();
+    console.log("Log pós processo demorado");
+  }catch(error){
+    console.log("Promise rejeitada");
+  }
+
+}
+executarProcessoDemorado();
+
+
+*/

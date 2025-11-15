@@ -40,12 +40,16 @@ async function executarObterCliente() {
 }
 executarObterCliente();
 
-//Obtendo o cliente com tratamento através de async/await
+//Obtendo o cliente com tratamento através de async/await + tratamento de erros
 
 async function tratarEObterCliente() {
-  let result = await obterClienteApi();
-  result = await tratarClienteApi(result);
+  try {
+    let result = await obterClienteApi();
+    result = await tratarClienteApi(result);
 
-  console.log(result);
+    console.log(result);
+  } catch (error) {
+    console.log(error);
+  }
 }
 tratarEObterCliente();

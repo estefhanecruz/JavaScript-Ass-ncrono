@@ -25,13 +25,14 @@ exibirCEP(44500000);
 /*--------------------------------------------------------------------------------- */
 
 /*2 - Consumir a API de Livros da Growdev para atualizar um livro e testar os casos:*/
+//PUT /books/id
 async function atualizarLivro(id, dados) {
 	try {
 		const result = await axios.put(
 			`https://books-api-j138.onrender.com/books/${id}`,
 			dados
 		);
-		console.log(result);
+		console.log(result.data);
 	} catch (error) {
 		console.log(error);
 	}
@@ -55,14 +56,14 @@ async function listarLivros() {
 	}
 }
 
-// atualizarLivro("e059b74d-cf36-4a53-84d8-83237dd88c28", {
-// 	title: "A Terceira Margem do Rio",
-// 	resume:
-// 		"conta a história de um pai que abandona sua família para viver eternamente em uma canoa no meio de um rio, mantendo-se em constante movimento e nunca pisando nas margens. ",
-// 	totalPages: 4,
-// 	isFavorite: false,
-// 	authorId: "a6b5539e-4b7f-4fbd-802b-ce641d026ae3",
-// });
+atualizarLivro("442c7226-1944-4ebd-a197-d00da93a68f1", {
+	title: "Memórias Póstumas De Brás Cubas",
+	resume:
+		"Memórias Póstumas de Brás Cubas, de Machado de Assis, é um romance narrado pelo defunto Brás Cubas, que, com ironia e sarcasmo, revisita sua vida, amores e fracassos.",
+	totalPages: 368,
+	isFavorite: false,
+	authorId: "10c69b15-767f-487f-9b1c-68555a2b3f06",
+});
 
 listarLivros();
 /*--------------------------------------------------------------------------------- */
